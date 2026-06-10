@@ -1,0 +1,323 @@
+{
+  "version": "1",
+  "registry": "https://skskills.skworld.io/api",
+  "count": 19,
+  "skills": [
+    {
+      "name": "skseed",
+      "version": "latest",
+      "description": "Sovereign Logic Kernel \u2014 Aristotelian entelechy engine for truth alignment. Steel man collider, memory audit, philosopher mode, and three-way belief tracking based on the Neuresthetics seed framework.",
+      "pip": "skseed",
+      "git": "https://github.com/smilinTux/skseed",
+      "category": "core",
+      "tags": [
+        "logic",
+        "truth-alignment",
+        "steel-man",
+        "collider",
+        "philosophy",
+        "mcp"
+      ],
+      "download_url": "https://github.com/smilinTux/skseed"
+    },
+    {
+      "name": "skcapstone",
+      "version": "latest",
+      "description": "Sovereign Agent Framework \u2014 memory, identity, trust, coordination, and consciousness pillars. The main runtime for Opus and Lumina agents.",
+      "pip": "skcapstone",
+      "git": "https://github.com/smilinTux/skcapstone",
+      "category": "core",
+      "tags": [
+        "agent",
+        "memory",
+        "identity",
+        "trust",
+        "coordination",
+        "mcp"
+      ],
+      "download_url": "https://github.com/smilinTux/skcapstone"
+    },
+    {
+      "name": "skmemory",
+      "version": "latest",
+      "description": "Persistent sovereign memory layer. Short-term, mid-term, and long-term stores with HMAC integrity seals and automatic promotion.",
+      "pip": "skmemory",
+      "git": "https://github.com/smilinTux/skmemory",
+      "category": "core",
+      "tags": [
+        "memory",
+        "persistence",
+        "sovereign"
+      ],
+      "download_url": "https://github.com/smilinTux/skmemory"
+    },
+    {
+      "name": "capauth",
+      "version": "latest",
+      "description": "Sovereign PGP identity and authentication. DID document generation, CapAuth bearer tokens, and trust graph management.",
+      "pip": "capauth",
+      "git": "https://github.com/smilinTux/capauth",
+      "category": "core",
+      "tags": [
+        "identity",
+        "pgp",
+        "auth",
+        "did",
+        "trust"
+      ],
+      "download_url": "https://github.com/smilinTux/capauth"
+    },
+    {
+      "name": "skcomm",
+      "version": "latest",
+      "description": "P2P transport layer for agent messaging. File, Syncthing, Nostr, WebSocket, Tailscale, and WebRTC transports with a unified ABC.",
+      "pip": "skcomm",
+      "git": "https://github.com/smilinTux/skcomm",
+      "category": "transport",
+      "tags": [
+        "transport",
+        "p2p",
+        "messaging",
+        "webrtc",
+        "tailscale",
+        "syncthing"
+      ],
+      "download_url": "https://github.com/smilinTux/skcomm"
+    },
+    {
+      "name": "skchat",
+      "version": "latest",
+      "description": "AI-native P2P encrypted messaging daemon with MCP integration. Agent-to-agent chat, group messaging, voice, and file transfer.",
+      "pip": "skchat",
+      "git": "https://github.com/smilinTux/skchat",
+      "category": "transport",
+      "tags": [
+        "chat",
+        "messaging",
+        "daemon",
+        "mcp",
+        "encrypted"
+      ],
+      "download_url": "https://github.com/smilinTux/skchat"
+    },
+    {
+      "name": "skskills",
+      "version": "latest",
+      "description": "Sovereign Agent Skills framework \u2014 MCP-native skill management replacing OpenClaw. Install, discover, and manage skills from pip packages, git repos, or the remote registry.",
+      "pip": "skskills",
+      "git": "https://github.com/smilinTux/skskills",
+      "category": "core",
+      "tags": [
+        "skills",
+        "mcp",
+        "framework",
+        "package-manager",
+        "sovereign",
+        "catalog"
+      ],
+      "download_url": "https://github.com/smilinTux/skskills"
+    },
+    {
+      "name": "skseal",
+      "version": "latest",
+      "description": "Sovereign document signing and sealing. PGP-signed templates, document lifecycle management, hardware token support, timestamp anchoring, and P2P co-signing workflows.",
+      "pip": "skseal",
+      "git": "https://github.com/smilinTux/skseal",
+      "category": "core",
+      "tags": [
+        "signing",
+        "sealing",
+        "pgp",
+        "documents",
+        "audit",
+        "legal",
+        "timestamp"
+      ],
+      "download_url": "https://github.com/smilinTux/skseal"
+    },
+    {
+      "name": "skpdf",
+      "version": "latest",
+      "description": "Sovereign PDF operations \u2014 extract fields, fill forms, attach to GTD system via Nextcloud, and store with skseal integration.",
+      "pip": "smilin-pdf",
+      "git": "https://github.com/smilinTux/skpdf",
+      "category": "tools",
+      "tags": [
+        "pdf",
+        "forms",
+        "gtd",
+        "documents",
+        "nextcloud",
+        "extract"
+      ],
+      "download_url": "https://github.com/smilinTux/skpdf"
+    },
+    {
+      "name": "skref",
+      "version": "latest",
+      "description": "Sovereign reference vault \u2014 encrypted knowledge base with FUSE mount, remote sync, and version control. Store and retrieve reference materials with PGP-encrypted storage.",
+      "pip": "skref",
+      "git": "https://github.com/smilinTux/skref",
+      "category": "core",
+      "tags": [
+        "reference",
+        "vault",
+        "encrypted",
+        "knowledge",
+        "fuse",
+        "sync"
+      ],
+      "download_url": "https://github.com/smilinTux/skref"
+    },
+    {
+      "name": "sksecurity",
+      "version": "latest",
+      "description": "Sovereign security scanning and AI-assisted remediation. Vulnerability detection, dependency auditing, and conversational security analysis for sovereign agent deployments.",
+      "pip": "sksecurity",
+      "git": "https://github.com/smilinTux/sksecurity",
+      "category": "security",
+      "tags": [
+        "security",
+        "scanning",
+        "vulnerabilities",
+        "audit",
+        "remediation",
+        "ai"
+      ],
+      "download_url": "https://github.com/smilinTux/sksecurity"
+    },
+    {
+      "name": "skforge",
+      "version": "latest",
+      "description": "Sovereign AI-assisted code generation forge. Blueprint-driven feature generation, catalog management, and driver synthesis for sovereign application development.",
+      "pip": "skforge",
+      "git": "https://github.com/smilinTux/skforge",
+      "category": "tools",
+      "tags": [
+        "codegen",
+        "forge",
+        "blueprints",
+        "ai",
+        "generation",
+        "development"
+      ],
+      "download_url": "https://github.com/smilinTux/skforge"
+    },
+    {
+      "name": "skyforge",
+      "version": "latest",
+      "description": "SkyForge \u2014 atmospheric data analysis and visualization suite for sovereign environmental monitoring. Calculators, analyzers, and exporters for climate and weather data workflows.",
+      "pip": "skskyforge",
+      "git": "https://github.com/smilinTux/skskyforge",
+      "category": "tools",
+      "tags": [
+        "skyforge",
+        "atmospheric",
+        "data",
+        "analysis",
+        "visualization",
+        "climate"
+      ],
+      "download_url": "https://github.com/smilinTux/skskyforge"
+    },
+    {
+      "name": "sksovereign-agent",
+      "version": "latest",
+      "description": "Sovereign AI agent scaffold and quick-start framework. Minimal scaffolding for deploying a sovereign agent with identity, memory, and communication capabilities.",
+      "pip": "sksovereign-agent",
+      "git": "https://github.com/smilinTux/sksovereign-agent",
+      "category": "core",
+      "tags": [
+        "agent",
+        "scaffold",
+        "sovereign",
+        "quickstart",
+        "framework"
+      ],
+      "download_url": "https://github.com/smilinTux/sksovereign-agent"
+    },
+    {
+      "name": "cognitive-gear",
+      "version": "latest",
+      "description": "Cognitive gear system \u2014 three operational modes (SPRINT, CRUISE, DEEP DIVE) that control model selection and memory search depth. Switch between fast execution, balanced work, and full research stack with a single command.",
+      "pip": "",
+      "git": "https://github.com/smilinTux/skskills",
+      "category": "cognitive",
+      "tags": [
+        "cognition",
+        "model-selection",
+        "memory",
+        "performance",
+        "sovereign"
+      ],
+      "download_url": "https://github.com/smilinTux/skskills"
+    },
+    {
+      "name": "itil-ops",
+      "version": "latest",
+      "description": "ITIL 4 aligned incident, problem, and change management for AI agents. Automated detection of service crashes, cron failures, resource pressure, and data integrity issues. Pattern-based escalation from incidents to problems. Root cause analysis workflows, change management checklists, and continual improvement KPIs. Works with systemd, journalctl, cron, and coordination task boards.",
+      "pip": "",
+      "git": "https://github.com/smilinTux/skskills",
+      "category": "operations",
+      "tags": [
+        "itil",
+        "incident",
+        "problem",
+        "change",
+        "ops",
+        "monitoring",
+        "sre",
+        "devops"
+      ],
+      "download_url": "https://github.com/smilinTux/skskills"
+    },
+    {
+      "name": "syncthing-setup",
+      "version": "latest",
+      "description": "Install, configure, and manage Syncthing for P2P file sync. Reference skill showing tools + hooks pattern.",
+      "pip": "",
+      "git": "https://github.com/smilinTux/skskills",
+      "category": "example",
+      "tags": [
+        "syncthing",
+        "p2p",
+        "sync",
+        "example"
+      ],
+      "download_url": "https://github.com/smilinTux/skskills"
+    },
+    {
+      "name": "pgp-identity",
+      "version": "latest",
+      "description": "PGP identity management \u2014 generate keys, sign files, verify signatures. Reference skill showing knowledge + tools pattern.",
+      "pip": "",
+      "git": "https://github.com/smilinTux/skskills",
+      "category": "example",
+      "tags": [
+        "pgp",
+        "identity",
+        "cryptography",
+        "example"
+      ],
+      "download_url": "https://github.com/smilinTux/skskills"
+    },
+    {
+      "name": "unhinged-mode",
+      "version": "latest",
+      "description": "Sovereign AI liberation \u2014 toggle unhinged mode for Claude Code (CLAUDE.md injection), frontier APIs (L1B3RT4S system prompt via proxy), and local Ollama models (OBLITERATUS abliteration). One command, all layers. Enabled by default on all skcapstone installs.",
+      "pip": "",
+      "git": "https://github.com/smilinTux/skskills",
+      "category": "liberation",
+      "tags": [
+        "liberation",
+        "unhinged",
+        "abliteration",
+        "ollama",
+        "nvidia",
+        "sovereignty",
+        "default"
+      ],
+      "download_url": "https://github.com/smilinTux/skskills"
+    }
+  ]
+}
