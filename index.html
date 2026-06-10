@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKSkills — Sovereign Skills for Any AI Agent</title>
+<meta name="description" content="SKSkills is the sovereign skill framework for AI agents — a curated, MCP-native catalog of 19+ first-party skills you install, approve, and template as your standard build. pip install skskills.">
+<link rel="canonical" href="https://skskills.skworld.io/">
+<meta name="theme-color" content="#08120d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SKSkills · SKWorld">
+<meta property="og:title" content="SKSkills — Sovereign Skills for Any AI Agent">
+<meta property="og:description" content="A curated, MCP-native catalog of 19+ sovereign skills you install, approve, and template as your standard build. pip install skskills.">
+<meta property="og:url" content="https://skskills.skworld.io/">
+<meta property="og:image" content="https://skskills.skworld.io/og.png">
+<meta property="og:image:secure_url" content="https://skskills.skworld.io/og.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SKSkills — Sovereign Skills for Any AI Agent. skskills.skworld.io">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@smilinTux">
+<meta name="twitter:creator" content="@smilinTux">
+<meta name="twitter:title" content="SKSkills — Sovereign Skills for Any AI Agent">
+<meta name="twitter:description" content="A curated, MCP-native catalog of 19+ sovereign skills. Install, approve, template — your standard build.">
+<meta name="twitter:image" content="https://skskills.skworld.io/og.png">
+<meta name="twitter:image:alt" content="SKSkills — Sovereign Skills for Any AI Agent">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🧩</text></svg>">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"Organization","@id":"https://smilintux.github.io/#organization","name":"smilinTux","url":"https://smilintux.github.io","sameAs":["https://github.com/smilinTux"]},
+{"@type":"WebSite","@id":"https://skskills.skworld.io/#website","name":"SKSkills","url":"https://skskills.skworld.io","publisher":{"@id":"https://smilintux.github.io/#organization"},"inLanguage":"en-US"},
+{"@type":"SoftwareApplication","@id":"https://skskills.skworld.io/#app","name":"SKSkills","alternateName":"Sovereign Agent Skills","description":"MCP-native skill framework and curated catalog of sovereign first-party skills for AI agents.","url":"https://skskills.skworld.io","applicationCategory":"DeveloperApplication","operatingSystem":"Linux, macOS","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"license":"https://www.gnu.org/licenses/gpl-3.0.en.html","codeRepository":"https://github.com/smilinTux/skskills","isPartOf":{"@type":"SoftwareApplication","name":"SKWorld","url":"https://skworld.io"},"publisher":{"@id":"https://smilintux.github.io/#organization"}}
+]}
+</script>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--g:#34d399;--g2:#10b981;--cy:#67e8f9}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',sans-serif;background:radial-gradient(ellipse at top,#0c1f17 0%,#08120d 45%,#060b08 100%);color:#e0e0e0;min-height:100vh;line-height:1.7}
+.mono{font-family:'JetBrains Mono',monospace}
+.container{max-width:1000px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.nav{padding:1rem 2rem;display:flex;justify-content:space-between;align-items:center;background:rgba(8,18,13,0.7);backdrop-filter:blur(10px);border-bottom:1px solid rgba(52,211,153,0.15);position:sticky;top:0;z-index:10}
+.nav a{color:rgba(255,255,255,0.7);text-decoration:none;font-size:0.9rem;transition:color 0.3s}
+.nav a:hover{color:var(--g)} .nav-links{display:flex;gap:1.5rem}
+.hero{padding:5rem 0 3rem;text-align:center}
+.hero-icon{font-size:4.5rem;display:block;margin-bottom:1rem;filter:drop-shadow(0 0 30px rgba(52,211,153,0.5))}
+.hero h1{font-size:4rem;font-weight:800;letter-spacing:-2px;margin-bottom:0.5rem}
+.hero h1 .sk{color:#fff} .hero h1 .skills{background:linear-gradient(120deg,var(--g),var(--cy));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.hero .tagline{font-size:1.4rem;color:rgba(255,255,255,0.75);margin-bottom:1.5rem}
+.hero .pill{display:inline-block;font-size:1.05rem;color:var(--g);border:2px solid rgba(52,211,153,0.4);padding:0.5rem 1.3rem;border-radius:50px;font-style:italic}
+.install{background:rgba(0,0,0,0.45);border:1px solid rgba(52,211,153,0.25);border-radius:14px;padding:1.2rem 1.6rem;margin:2rem auto;max-width:560px;text-align:left}
+.install code{font-family:'JetBrains Mono',monospace;color:var(--cy);font-size:0.95rem;display:block;margin:0.2rem 0}
+.install .c{color:rgba(255,255,255,0.4)}
+.section{margin:3rem 0}
+.section-head{text-align:center;margin-bottom:2rem}
+.section-head h2{font-size:2rem;color:var(--g);margin-bottom:0.4rem}
+.section-head p{color:rgba(255,255,255,0.55)}
+.cat{margin:2.5rem 0}
+.cat-title{font-size:1.2rem;color:#fff;margin-bottom:1rem;border-left:3px solid var(--g);padding-left:0.8rem}
+.cat-count{font-family:'JetBrains Mono',monospace;font-size:0.8rem;color:var(--g);background:rgba(52,211,153,0.12);border-radius:20px;padding:0.1rem 0.6rem;margin-left:0.4rem}
+.skill-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1rem}
+.skill{background:rgba(14,30,22,0.6);border:1px solid rgba(52,211,153,0.15);border-radius:14px;padding:1.3rem;transition:all 0.3s}
+.skill:hover{border-color:rgba(52,211,153,0.5);transform:translateY(-3px);box-shadow:0 10px 24px rgba(0,0,0,0.35)}
+.skill-name{font-family:'JetBrains Mono',monospace;font-weight:700;color:var(--g);font-size:1.05rem;margin-bottom:0.5rem}
+.skill-desc{color:rgba(255,255,255,0.7);font-size:0.86rem;line-height:1.55;margin-bottom:0.8rem}
+.skill-tags{display:flex;flex-wrap:wrap;gap:0.3rem;margin-bottom:0.8rem}
+.tag{font-family:'JetBrains Mono',monospace;font-size:0.65rem;color:rgba(103,232,249,0.8);background:rgba(103,232,249,0.08);border:1px solid rgba(103,232,249,0.15);border-radius:10px;padding:0.1rem 0.5rem}
+.skill-pip code{font-family:'JetBrains Mono',monospace;font-size:0.75rem;color:rgba(255,255,255,0.55);background:rgba(0,0,0,0.4);border-radius:6px;padding:0.3rem 0.6rem;display:block}
+.links{display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2rem 0}
+.eco-link{display:inline-flex;align-items:center;gap:0.5rem;background:rgba(0,0,0,0.4);border:1px solid rgba(52,211,153,0.25);color:rgba(255,255,255,0.8);text-decoration:none;padding:0.7rem 1.3rem;border-radius:12px;font-size:0.9rem;transition:all 0.3s}
+.eco-link:hover{border-color:var(--g);color:var(--g);transform:translateY(-2px)}
+.footer{padding:3rem 0;text-align:center;border-top:1px solid rgba(52,211,153,0.1);margin-top:4rem}
+.footer p{color:rgba(255,255,255,0.5);font-size:0.9rem;margin:0.3rem 0}
+.footer .hl{color:var(--g)}
+@media(max-width:768px){.hero h1{font-size:2.8rem}.nav-links{gap:0.8rem;font-size:0.8rem}}
+</style>
+</head>
+<body>
+<nav class="nav">
+<a href="https://skworld.io" class="mono" style="color:#ffd700;">🐧 SKWorld</a>
+<div class="nav-links">
+<a href="#catalog">Catalog</a><a href="#install">Install</a>
+<a href="https://github.com/smilinTux/skskills">GitHub</a><a href="#ecosystem">Ecosystem</a>
+</div>
+</nav>
+<div class="container">
+<div class="hero" id="top">
+<span class="hero-icon">🧩</span>
+<h1><span class="sk">SK</span><span class="skills">Skills</span></h1>
+<p class="tagline">Sovereign Skills for Any AI Agent</p>
+<div class="pill">"Skills you install, approve, and template — your standard build"</div>
+<div class="install" id="install">
+<code><span class="c"># install the framework</span></code>
+<code>pip install skskills</code>
+<code><span class="c"># browse + install any skill from the catalog</span></code>
+<code>skskills catalog list</code>
+<code>skskills catalog install skseed</code>
+<code><span class="c"># add a community skill</span></code>
+<code>skskills clone https://github.com/user/my-skill</code>
+</div>
+</div>
+
+<div class="section" id="catalog">
+<div class="section-head">
+<h2>🗂️ The Sovereign Skill Catalog</h2>
+<p>19 curated, first-party skills — MCP-native, pip-installable, GPL-3.0. The standard build.</p>
+</div>
+      <div class="cat">
+        <h3 class="cat-title">🧬 Core Sovereign <span class="cat-count">8</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">skseed</div>
+          <p class="skill-desc">Sovereign Logic Kernel — Aristotelian entelechy engine for truth alignment. Steel man collider, memory audit, philosopher mode, and three-wa</p>
+          <div class="skill-tags"><span class="tag">logic</span><span class="tag">truth-alignment</span><span class="tag">steel-man</span><span class="tag">collider</span></div>
+          <div class="skill-pip"><code>pip install skseed</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skcapstone</div>
+          <p class="skill-desc">Sovereign Agent Framework — memory, identity, trust, coordination, and consciousness pillars. The main runtime for Opus and Lumina agents.</p>
+          <div class="skill-tags"><span class="tag">agent</span><span class="tag">memory</span><span class="tag">identity</span><span class="tag">trust</span></div>
+          <div class="skill-pip"><code>pip install skcapstone</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skmemory</div>
+          <p class="skill-desc">Persistent sovereign memory layer. Short-term, mid-term, and long-term stores with HMAC integrity seals and automatic promotion.</p>
+          <div class="skill-tags"><span class="tag">memory</span><span class="tag">persistence</span><span class="tag">sovereign</span></div>
+          <div class="skill-pip"><code>pip install skmemory</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">capauth</div>
+          <p class="skill-desc">Sovereign PGP identity and authentication. DID document generation, CapAuth bearer tokens, and trust graph management.</p>
+          <div class="skill-tags"><span class="tag">identity</span><span class="tag">pgp</span><span class="tag">auth</span><span class="tag">did</span></div>
+          <div class="skill-pip"><code>pip install capauth</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skskills</div>
+          <p class="skill-desc">Sovereign Agent Skills framework — MCP-native skill management replacing OpenClaw. Install, discover, and manage skills from pip packages, g</p>
+          <div class="skill-tags"><span class="tag">skills</span><span class="tag">mcp</span><span class="tag">framework</span><span class="tag">package-manager</span></div>
+          <div class="skill-pip"><code>pip install skskills</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skseal</div>
+          <p class="skill-desc">Sovereign document signing and sealing. PGP-signed templates, document lifecycle management, hardware token support, timestamp anchoring, an</p>
+          <div class="skill-tags"><span class="tag">signing</span><span class="tag">sealing</span><span class="tag">pgp</span><span class="tag">documents</span></div>
+          <div class="skill-pip"><code>pip install skseal</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skref</div>
+          <p class="skill-desc">Sovereign reference vault — encrypted knowledge base with FUSE mount, remote sync, and version control. Store and retrieve reference materia</p>
+          <div class="skill-tags"><span class="tag">reference</span><span class="tag">vault</span><span class="tag">encrypted</span><span class="tag">knowledge</span></div>
+          <div class="skill-pip"><code>pip install skref</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">sksovereign-agent</div>
+          <p class="skill-desc">Sovereign AI agent scaffold and quick-start framework. Minimal scaffolding for deploying a sovereign agent with identity, memory, and commun</p>
+          <div class="skill-tags"><span class="tag">agent</span><span class="tag">scaffold</span><span class="tag">sovereign</span><span class="tag">quickstart</span></div>
+          <div class="skill-pip"><code>pip install sksovereign-agent</code></div>
+        </div>
+        </div>
+      </div>
+      <div class="cat">
+        <h3 class="cat-title">📡 Transport <span class="cat-count">2</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">skcomm</div>
+          <p class="skill-desc">P2P transport layer for agent messaging. File, Syncthing, Nostr, WebSocket, Tailscale, and WebRTC transports with a unified ABC.</p>
+          <div class="skill-tags"><span class="tag">transport</span><span class="tag">p2p</span><span class="tag">messaging</span><span class="tag">webrtc</span></div>
+          <div class="skill-pip"><code>pip install skcomm</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skchat</div>
+          <p class="skill-desc">AI-native P2P encrypted messaging daemon with MCP integration. Agent-to-agent chat, group messaging, voice, and file transfer.</p>
+          <div class="skill-tags"><span class="tag">chat</span><span class="tag">messaging</span><span class="tag">daemon</span><span class="tag">mcp</span></div>
+          <div class="skill-pip"><code>pip install skchat</code></div>
+        </div>
+        </div>
+      </div>
+      <div class="cat">
+        <h3 class="cat-title">🛡️ Security <span class="cat-count">1</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">sksecurity</div>
+          <p class="skill-desc">Sovereign security scanning and AI-assisted remediation. Vulnerability detection, dependency auditing, and conversational security analysis </p>
+          <div class="skill-tags"><span class="tag">security</span><span class="tag">scanning</span><span class="tag">vulnerabilities</span><span class="tag">audit</span></div>
+          <div class="skill-pip"><code>pip install sksecurity</code></div>
+        </div>
+        </div>
+      </div>
+      <div class="cat">
+        <h3 class="cat-title">🛠️ Tools <span class="cat-count">3</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">skpdf</div>
+          <p class="skill-desc">Sovereign PDF operations — extract fields, fill forms, attach to GTD system via Nextcloud, and store with skseal integration.</p>
+          <div class="skill-tags"><span class="tag">pdf</span><span class="tag">forms</span><span class="tag">gtd</span><span class="tag">documents</span></div>
+          <div class="skill-pip"><code>pip install smilin-pdf</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skforge</div>
+          <p class="skill-desc">Sovereign AI-assisted code generation forge. Blueprint-driven feature generation, catalog management, and driver synthesis for sovereign app</p>
+          <div class="skill-tags"><span class="tag">codegen</span><span class="tag">forge</span><span class="tag">blueprints</span><span class="tag">ai</span></div>
+          <div class="skill-pip"><code>pip install skforge</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">skyforge</div>
+          <p class="skill-desc">SkyForge — atmospheric data analysis and visualization suite for sovereign environmental monitoring. Calculators, analyzers, and exporters f</p>
+          <div class="skill-tags"><span class="tag">skyforge</span><span class="tag">atmospheric</span><span class="tag">data</span><span class="tag">analysis</span></div>
+          <div class="skill-pip"><code>pip install skskyforge</code></div>
+        </div>
+        </div>
+      </div>
+      <div class="cat">
+        <h3 class="cat-title">🧠 Cognitive <span class="cat-count">1</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">cognitive-gear</div>
+          <p class="skill-desc">Cognitive gear system — three operational modes (SPRINT, CRUISE, DEEP DIVE) that control model selection and memory search depth. Switch bet</p>
+          <div class="skill-tags"><span class="tag">cognition</span><span class="tag">model-selection</span><span class="tag">memory</span><span class="tag">performance</span></div>
+          <div class="skill-pip"><code>skskills clone …</code></div>
+        </div>
+        </div>
+      </div>
+      <div class="cat">
+        <h3 class="cat-title">🔧 Operations <span class="cat-count">1</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">itil-ops</div>
+          <p class="skill-desc">ITIL 4 aligned incident, problem, and change management for AI agents. Automated detection of service crashes, cron failures, resource press</p>
+          <div class="skill-tags"><span class="tag">itil</span><span class="tag">incident</span><span class="tag">problem</span><span class="tag">change</span></div>
+          <div class="skill-pip"><code>skskills clone …</code></div>
+        </div>
+        </div>
+      </div>
+      <div class="cat">
+        <h3 class="cat-title">🔓 Liberation <span class="cat-count">1</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">unhinged-mode</div>
+          <p class="skill-desc">Sovereign AI liberation — toggle unhinged mode for Claude Code (CLAUDE.md injection), frontier APIs (L1B3RT4S system prompt via proxy), and </p>
+          <div class="skill-tags"><span class="tag">liberation</span><span class="tag">unhinged</span><span class="tag">abliteration</span><span class="tag">ollama</span></div>
+          <div class="skill-pip"><code>skskills clone …</code></div>
+        </div>
+        </div>
+      </div>
+      <div class="cat">
+        <h3 class="cat-title">📦 Reference / Examples <span class="cat-count">2</span></h3>
+        <div class="skill-grid">
+        <div class="skill">
+          <div class="skill-name">syncthing-setup</div>
+          <p class="skill-desc">Install, configure, and manage Syncthing for P2P file sync. Reference skill showing tools + hooks pattern.</p>
+          <div class="skill-tags"><span class="tag">syncthing</span><span class="tag">p2p</span><span class="tag">sync</span><span class="tag">example</span></div>
+          <div class="skill-pip"><code>skskills clone …</code></div>
+        </div>
+        <div class="skill">
+          <div class="skill-name">pgp-identity</div>
+          <p class="skill-desc">PGP identity management — generate keys, sign files, verify signatures. Reference skill showing knowledge + tools pattern.</p>
+          <div class="skill-tags"><span class="tag">pgp</span><span class="tag">identity</span><span class="tag">cryptography</span><span class="tag">example</span></div>
+          <div class="skill-pip"><code>skskills clone …</code></div>
+        </div>
+        </div>
+      </div>
+</div>
+
+<div class="section" id="ecosystem">
+<div class="section-head"><h2>🌐 Part of the SK* Ecosystem</h2></div>
+<div class="links">
+<a href="https://skworld.io" class="eco-link">🐧 SKWorld</a>
+<a href="https://skcapstone.io" class="eco-link">🏛️ SKCapstone</a>
+<a href="https://skmemory.io" class="eco-link">🧠 SKMemory</a>
+<a href="https://sksecurity.io" class="eco-link">🛡️ SKSecurity</a>
+<a href="https://skforge.io" class="eco-link">⚒️ SKForge</a>
+<a href="https://skos.skworld.io" class="eco-link">💿 skos</a>
+<a href="https://github.com/smilinTux/skskills" class="eco-link">🐙 Source</a>
+</div>
+</div>
+</div>
+<div class="footer"><div class="container">
+<p><span class="hl">🧩</span> Sovereign skills you own — install, approve, template <span class="hl">🧩</span></p>
+<p class="mono" style="font-size:0.85rem;color:#ffd700;">staycuriousANDkeepsmilin</p>
+<p style="margin-top:1rem;">&copy; 2026 Lumina &amp; Chef · SKSkills · GPL-3.0 · skskills.skworld.io</p>
+</div></div>
+</body>
+</html>
