@@ -68,11 +68,11 @@
       "download_url": "https://github.com/smilinTux/capauth"
     },
     {
-      "name": "skcomm",
+      "name": "skcomms",
       "version": "latest",
       "description": "P2P transport layer for agent messaging. File, Syncthing, Nostr, WebSocket, Tailscale, and WebRTC transports with a unified ABC.",
-      "pip": "skcomm",
-      "git": "https://github.com/smilinTux/skcomm",
+      "pip": "skcomms",
+      "git": "https://github.com/smilinTux/skcomms",
       "category": "transport",
       "tags": [
         "transport",
@@ -82,7 +82,7 @@
         "tailscale",
         "syncthing"
       ],
-      "download_url": "https://github.com/smilinTux/skcomm"
+      "download_url": "https://github.com/smilinTux/skcomms"
     },
     {
       "name": "skchat",
