@@ -1,0 +1,135 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "skskills Component Map",
+    "subtitle": "Manifest, registry, loader, and aggregator behind the install -> load -> serve lifecycle",
+    "output": "skskills.architecture.html",
+    "quality_profile": "showcase"
+  },
+  "components": [
+    {
+      "id": "channels",
+      "type": "external",
+      "label": "Delivery channels",
+      "sublabel": "local path, git, pip, catalog.yaml, remote registry",
+      "pos": [40, 190],
+      "size": [220, 100]
+    },
+    {
+      "id": "manifest",
+      "type": "backend",
+      "label": "skill.yaml manifest",
+      "sublabel": "SkillManifest: knowledge, tool, hook",
+      "pos": [430, 40],
+      "size": [240, 90]
+    },
+    {
+      "id": "registry",
+      "type": "database",
+      "label": "Registry",
+      "sublabel": "~/.skskills, local-first, registry.json index",
+      "pos": [430, 180],
+      "size": [240, 100]
+    },
+    {
+      "id": "loader",
+      "type": "backend",
+      "label": "Loader",
+      "sublabel": "resolve entrypoint: dotpath, file, or script",
+      "pos": [430, 330],
+      "size": [240, 90]
+    },
+    {
+      "id": "aggregator",
+      "type": "backend",
+      "label": "Aggregator",
+      "sublabel": "one MCP server over stdio",
+      "pos": [430, 470],
+      "size": [240, 100]
+    },
+    {
+      "id": "skcapstone",
+      "type": "external",
+      "label": "skcapstone",
+      "sublabel": "agent runtime, built-in skills",
+      "pos": [850, 40],
+      "size": [240, 90]
+    },
+    {
+      "id": "capauth",
+      "type": "security",
+      "label": "CapAuth",
+      "sublabel": "optional signature verify (unverified today)",
+      "pos": [850, 190],
+      "size": [240, 90]
+    },
+    {
+      "id": "agent",
+      "type": "frontend",
+      "label": "MCP agent",
+      "sublabel": "Claude Code or any stdio-MCP client",
+      "pos": [890, 470],
+      "size": [220, 100]
+    }
+  ],
+  "boundaries": [
+    {
+      "kind": "region",
+      "label": "skskills core",
+      "wraps": ["manifest", "registry", "loader", "aggregator"],
+      "pad": 24
+    }
+  ],
+  "connections": [
+    {
+      "id": "channels-to-registry",
+      "from": "channels",
+      "to": "registry",
+      "label": "install(): validate then copy",
+      "variant": "default"
+    },
+    {
+      "id": "registry-to-manifest",
+      "from": "registry",
+      "to": "manifest",
+      "label": "parse_skill_yaml()",
+      "variant": "default"
+    },
+    {
+      "id": "registry-to-loader",
+      "from": "registry",
+      "to": "loader",
+      "label": "discover enabled skills",
+      "variant": "default"
+    },
+    {
+      "id": "loader-to-aggregator",
+      "from": "loader",
+      "to": "aggregator",
+      "label": "resolved tools: ok, degraded, or error",
+      "variant": "default"
+    },
+    {
+      "id": "skcapstone-to-registry",
+      "from": "skcapstone",
+      "to": "registry",
+      "label": "list_installed, built-ins",
+      "variant": "default"
+    },
+    {
+      "id": "capauth-to-registry",
+      "from": "capauth",
+      "to": "registry",
+      "label": "optional signature verify",
+      "variant": "dashed"
+    },
+    {
+      "id": "aggregator-to-agent",
+      "from": "aggregator",
+      "to": "agent",
+      "label": "skill.tool calls, skill:// resources",
+      "variant": "emphasis"
+    }
+  ]
+}
