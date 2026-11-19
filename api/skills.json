@@ -1,7 +1,7 @@
 {
   "version": "1",
   "registry": "https://skskills.skworld.io/api",
-  "count": 19,
+  "count": 20,
   "skills": [
     {
       "name": "skseed",
@@ -219,6 +219,23 @@
         "climate"
       ],
       "download_url": "https://github.com/smilinTux/skskyforge"
+    },
+    {
+      "name": "sk-pages",
+      "version": "latest",
+      "description": "Give your agent a voice on the internet. Publish HTML pages, reports, dashboards and small static sites with one command and hand back a link, private behind SSO or public by unguessable link, with an optional Nextcloud Talk post for feedback.",
+      "pip": "",
+      "git": "https://github.com/smilinTux/skpages",
+      "category": "tools",
+      "tags": [
+        "pages",
+        "html",
+        "publish",
+        "report",
+        "nextcloud",
+        "talk"
+      ],
+      "download_url": "https://github.com/smilinTux/skpages"
     },
     {
       "name": "sksovereign-agent",
